@@ -6,7 +6,7 @@ import TodoList from './Components/TodoList'
 
 const Home: NextPage = () => {
   return (
-    <div className=''>
+    <div>
       <TodoList></TodoList>
       
     

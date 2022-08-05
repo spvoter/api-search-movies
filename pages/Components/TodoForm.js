@@ -19,15 +19,15 @@ const handleSubmit = e =>{
 }
 
   return (
-    <form className='todo-form' onSubmit={handleSubmit}>
-        <input 
+    <form onSubmit={handleSubmit}>
+        <input
         type='text' 
         placeholder='Add an item' 
         value={input} 
         name='text' 
-        className='todo-input'
+        className='todo-input bg-slate-200 py-2 px-4 mx-2 mb-4 rounded-md'
         onChange={handleChange}></input>
-        <button className='todo-button'>Add to list</button>
+        <button className='todo-button py-2 px-4 bg-slate-400 rounded-md'>Add to list</button>
     </form>
   )
 }
