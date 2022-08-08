@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import axios from 'axios'
 
 function TodoForm(props) {
 const [input, setInput] = useState('')
@@ -7,8 +8,12 @@ const handleChange = e => {
     setInput(e.target.value);
 }
 
-const handleSubmit = e =>{
+const handleSubmit = async e =>{
     e.preventDefault();
+
+    console.log('dupa')
+    const results = await axios.get('https://www.omdbapi.com/?apikey=a4504049&s=matrix&page=1')
+    console.log(results)
 
     props.onSubmit({
         id: Math.floor(Math.random() *1000),
